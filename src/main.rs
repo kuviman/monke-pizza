@@ -167,10 +167,6 @@ impl Opt {
 fn main() {
     logger::init().unwrap();
     geng::setup_panic_handler();
-    #[cfg(target_arch = "wasm32")]
-    {
-        console_error_panic_hook::set_once();
-    }
     if let Some(dir) = std::env::var_os("CARGO_MANIFEST_DIR") {
         std::env::set_current_dir(dir).unwrap();
     } else {
@@ -207,6 +203,7 @@ fn main() {
                 fn init();
             }
             init();
+            console_error_panic_hook::set_once();
         }
         let assets = <Assets as geng::LoadAsset>::load(&geng, "assets");
         geng::run(
