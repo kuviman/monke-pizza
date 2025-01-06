@@ -31,7 +31,7 @@ jobs:
           args: build --release --target wasm32-unknown-unknown
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: web
           path: target/geng
@@ -72,7 +72,7 @@ jobs:
           args: build --release
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.platform.channel }}
           path: target/geng
@@ -85,7 +85,7 @@ jobs:
       - build-native
     steps:
       - name: Download artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
 
       - name: Deploy GitHub Pages
         if: github.ref == 'refs/heads/main'
