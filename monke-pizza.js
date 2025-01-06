@@ -4,6 +4,7 @@ import * as __wbg_star1 from './snippets/geng-7cb12aba88666a68/inline2.js';
 import * as __wbg_star2 from './snippets/geng-7cb12aba88666a68/inline3.js';
 import * as __wbg_star3 from './snippets/geng-7cb12aba88666a68/inline5.js';
 import * as __wbg_star4 from './snippets/geng-7cb12aba88666a68/src/window/web.js';
+import * as __wbg_star5 from './snippets/monke-pizza-1c5a41a0110ed517/compat.js';
 
 let wasm;
 
@@ -245,12 +246,12 @@ function debugString(val) {
     // TODO we could test for more things here, like `Set`s and `Map`s.
     return className;
 }
-function __wbg_adapter_26(arg0, arg1, arg2) {
-    wasm.closure7_externref_shim(arg0, arg1, arg2);
+function __wbg_adapter_26(arg0, arg1) {
+    wasm._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h513aef23a42f8ba4(arg0, arg1);
 }
 
-function __wbg_adapter_29(arg0, arg1) {
-    wasm._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__hf10da198cdb664ca(arg0, arg1);
+function __wbg_adapter_29(arg0, arg1, arg2) {
+    wasm.closure11_externref_shim(arg0, arg1, arg2);
 }
 
 function __wbg_adapter_32(arg0, arg1, arg2) {
@@ -802,16 +803,12 @@ function __wbg_get_imports() {
         const ret = false;
         return ret;
     };
-    imports.wbg.__wbindgen_closure_wrapper220 = function(arg0, arg1, arg2) {
+    imports.wbg.__wbindgen_closure_wrapper221 = function(arg0, arg1, arg2) {
         const ret = makeMutClosure(arg0, arg1, 8, __wbg_adapter_26);
         return ret;
     };
-    imports.wbg.__wbindgen_closure_wrapper222 = function(arg0, arg1, arg2) {
+    imports.wbg.__wbindgen_closure_wrapper223 = function(arg0, arg1, arg2) {
         const ret = makeMutClosure(arg0, arg1, 8, __wbg_adapter_29);
-        return ret;
-    };
-    imports.wbg.__wbindgen_closure_wrapper680 = function(arg0, arg1, arg2) {
-        const ret = makeClosure(arg0, arg1, 178, __wbg_adapter_32);
         return ret;
     };
     imports.wbg.__wbindgen_closure_wrapper682 = function(arg0, arg1, arg2) {
@@ -827,6 +824,10 @@ function __wbg_get_imports() {
         return ret;
     };
     imports.wbg.__wbindgen_closure_wrapper688 = function(arg0, arg1, arg2) {
+        const ret = makeClosure(arg0, arg1, 178, __wbg_adapter_32);
+        return ret;
+    };
+    imports.wbg.__wbindgen_closure_wrapper690 = function(arg0, arg1, arg2) {
         const ret = makeMutClosure(arg0, arg1, 178, __wbg_adapter_41);
         return ret;
     };
@@ -881,6 +882,7 @@ function __wbg_get_imports() {
     imports['./snippets/geng-7cb12aba88666a68/inline3.js'] = __wbg_star2;
     imports['./snippets/geng-7cb12aba88666a68/inline5.js'] = __wbg_star3;
     imports['./snippets/geng-7cb12aba88666a68/src/window/web.js'] = __wbg_star4;
+    imports['./snippets/monke-pizza-1c5a41a0110ed517/compat.js'] = __wbg_star5;
 
     return imports;
 }
