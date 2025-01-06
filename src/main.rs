@@ -195,6 +195,15 @@ fn main() {
             None
         };
         let geng = Geng::new("VimJam 2 - Pizza Royal by kuviman");
+        #[cfg(target_arch = "wasm32")]
+        {
+            use wasm_bindgen::prelude::*;
+            #[wasm_bindgen(module = "/compat.js")]
+            extern "C" {
+                fn init();
+            }
+            init();
+        }
         let assets = <Assets as geng::LoadAsset>::load(&geng, "assets");
         geng::run(
             &geng,
