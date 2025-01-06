@@ -168,7 +168,7 @@ fn main() {
     logger::init().unwrap();
     geng::setup_panic_handler();
     if let Some(dir) = std::env::var_os("CARGO_MANIFEST_DIR") {
-        std::env::set_current_dir(std::path::Path::new(&dir).join("static")).unwrap();
+        std::env::set_current_dir(dir).unwrap();
     } else {
         #[cfg(not(target_arch = "wasm32"))]
         {
@@ -195,7 +195,7 @@ fn main() {
             None
         };
         let geng = Geng::new("VimJam 2 - Pizza Royal by kuviman");
-        let assets = <Assets as geng::LoadAsset>::load(&geng, ".");
+        let assets = <Assets as geng::LoadAsset>::load(&geng, "assets");
         geng::run(
             &geng,
             geng::LoadingScreen::new(&geng, geng::EmptyLoadingScreen, assets, {
