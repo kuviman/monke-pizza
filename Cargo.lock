@@ -489,6 +489,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "console_error_panic_hook"
+version = "0.1.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a06aeb73f470f66dcdbf7223caeebb85984942f22f1adb2a088cf9668146bbbc"
+dependencies = [
+ "cfg-if 1.0.0",
+ "wasm-bindgen",
+]
+
+[[package]]
 name = "convert_case"
 version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1809,6 +1819,7 @@ dependencies = [
 name = "monke-pizza"
 version = "0.1.0"
 dependencies = [
+ "console_error_panic_hook",
  "geng",
  "serde",
  "wasm-bindgen",
